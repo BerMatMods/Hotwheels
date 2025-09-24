@@ -1,1 +1,66 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔥 Hot Wheels Day • Para ti, mi amor</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body onclick="createExplosion(event)">
+
+  <img src="https://i.postimg.cc/wTC09Lkw/HWU2-logo.png" alt="Hot Wheels Logo" class="logo">
+
+  <div class="card">
+    <h1>Para ti, mi campeón ❤️</h1>
+    <p class="romantic-text">El hombre que hace que mi corazón acelere<br>más que cualquier Hot Wheels en la pista.</p>
+
+    <div class="track-divider"></div>
+
+    <p class="romantic-text">Feliz Día de los Carritos, amor.<br>Contigo, cada día es una carrera hacia la felicidad.</p>
+
+    <div class="buttons">
+      <button class="btn" onclick="showLetter()">💌 Ver carta automática</button>
+      <button class="btn" onclick="showGiftCard()">🎁 Ver tarjeta de regalo</button>
+    </div>
+  </div>
+
+  <!-- Carrusel: auto + botones bien separados -->
+  <div class="car-container">
+    <img id="currentCar" class="current-car" src="https://i.postimg.cc/vBLWf8c9/1758738785240-removebg-preview.png" alt="Hot Wheels Auto">
+    
+    <div class="carousel-nav">
+      <button class="carousel-btn" onclick="prevSlide()">‹</button>
+      <button class="carousel-btn" onclick="nextSlide()">›</button>
+    </div>
+
+    <div class="carousel-indicators">
+      <span class="indicator active" onclick="goToSlide(0)"></span>
+      <span class="indicator" onclick="goToSlide(1)"></span>
+      <span class="indicator" onclick="goToSlide(2)"></span>
+    </div>
+  </div>
+
+  <div class="footer-credit">By AnthZz Berrocal • BerMatMods</div>
+
+  <!-- Modal de Carta -->
+  <div id="letterModal">
+    <div class="letter-content">
+      <span class="close-letter" onclick="closeLetter()">&times;</span>
+      <div class="letter-title">Para mi velocista favorito</div>
+      <div class="letter-body" id="letterText"></div>
+    </div>
+  </div>
+
+  <!-- Modal de Tarjeta de Regalo -->
+  <div id="giftCardModal" onclick="closeGiftCard()">
+    <div style="position:relative;">
+      <div class="close-gift" onclick="event.stopPropagation(); closeGiftCard()">&times;</div>
+      <img src="https://i.postimg.cc/wB2DSmv4/1758734395720-removebg-preview.png" class="gift-card-image">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
